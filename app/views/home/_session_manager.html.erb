@@ -1,10 +1,11 @@
 <% if current_user %>
        
-  <li class="nav-item dropdown "> <a class="n dropdown-toggle text-light text-decoration-none" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <%= current_user.name %> <%= current_user.roles.pluck(:name) %> </a>
+  <li class="nav-item dropdown "> 
+    <a class="n dropdown-toggle text-light text-decoration-none" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+      <%= current_user.name %> 
+    </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><%= link_to "Admin", admin_path, class:"dropdown-item" %></li>
       <li><%= link_to "Editar my cuenta", edit_user_registration_path, class:"dropdown-item"%>
-      <%= link_to "Editar my cuenta", edit_user_registration_path, class:"dropdown-item"%>
       <li><hr class="dropdown-divider"></li>
       <li><%= button_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item active fw-light" %></li>
     </ul>
