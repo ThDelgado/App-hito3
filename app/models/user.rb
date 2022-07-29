@@ -10,7 +10,7 @@ class User < ApplicationRecord
   after_create :assing_default_role
 
   def assing_default_role
-    self.add_role(:newuser) if self.role.blank?
+    self.add_role(:user) if self.role.blank?
   end
   
 

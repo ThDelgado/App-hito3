@@ -12,14 +12,16 @@
          <li class="nav-item">
          <%= link_to "Inicio", root_path, class:"nav-link active fw-light" %>
          </li>
-        
+      <% if current_user%>  
+        <%= current_user.has_role? :admin %>
          <li class="nav-item">
            <%= link_to "---", class:"nav-link active fw-light" %>
          </li>
          <li class="nav-item">
            <%= link_to "----",  class:"nav-link active fw-light" %>
          </li>
+      <% end %>
      </div>
 
    </div>
- </nav
+ </nav>

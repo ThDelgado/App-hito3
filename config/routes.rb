@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'admin/users'
     get 'admin/show_items'
   end
+
   resources :orders
   resources :products
   devise_for :users, controllers: {

@@ -77,3 +77,4 @@ end
  gem 'devise'
  gem 'rolify'
  gem 'activeadmin'
+ gem 'pundit'
